@@ -1,0 +1,12 @@
+body {
+    font-size: 3vw;
+    font-family: 'Special Elite', cursive;
+}
+
+p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
