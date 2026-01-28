@@ -1,12 +1,97 @@
+:root {
+    --bg-color: #f5f1e8;
+    --text-color: #3d3a32;
+    --link-color: #888;
+    --link-hover: #555;
+}
+
+body.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #d4d0c7;
+    --link-color: #777;
+    --link-hover: #aaa;
+}
+
 body {
     font-size: 3vw;
     font-family: 'Special Elite', cursive;
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 6vw;
+    }
 }
 
 p {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 52%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
-  
+
+#greeting,
+#code,
+#music,
+#stuff {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#greeting.fade-out,
+#code.fade-out,
+#music.fade-out,
+#stuff.fade-out {
+    opacity: 0;
+}
+
+.links {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(14px, 3vw, 30px);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.links a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--link-hover);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(12px, 2.5vw, 25px);
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--link-hover);
+}
