@@ -33,7 +33,7 @@ const stuff = [
     "Discuss Formula One with me.",
     "Let's talk electric guitars.",
     "Let's spin some records.",
-    "Let's talk Old schoold D&D.",
+    "Let's talk Old school D&D.",
     "Roll 1d20 with me.",
     "Let's discuss movies.",
     "Can I quote Seinfeld?",
